@@ -1,0 +1,734 @@
+/*font-family: 'Playfair Display', serif;
+	font-family: 'Raleway', sans-serif;
+font-family: 'Questrial', sans-serif;*/
+ 
+
+
+
+
+header.header {
+	position: relative;
+}
+.top_slider figure {
+	position: relative;
+}
+
+.top_slider figure img {
+	max-width: 100%;
+	height: auto;
+}
+
+.top_slider figure figcaption {
+	position: absolute; 
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top_slider figure figcaption .info {
+	max-width: 994px;
+	width: 100%;
+	margin-left: 150px;
+	position: relative;
+	
+}
+.top_slider figure::after {
+ content: "olins";
+	position: absolute;
+	top: -30px;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+ align-items: center;
+	justify-content: flex-start;
+ color: rgba(115,73, 91, 0.05);  
+ font-size: 370px; 
+ font-family: 'Raleway', sans-serif; 
+ font-style: italic;     
+ font-weight: 900;
+ box-sizing: border-box;	
+	padding-left: 170px;         
+}
+
+.top_slider figure figcaption .info span.category {
+	font-size: 21px;
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	color: #7f5568;
+	line-height: 1;
+	margin: 0px 0 13px 0;
+ display: block;
+  
+}
+
+.top_slider figure figcaption .info h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 45px;
+	font-weight: 900;
+	color: #000000;
+	text-transform: uppercase;
+	line-height: 1.2;
+}
+.top_slider figure figcaption .info .details {
+	display: flex;
+	justify-content: flex-start;
+	align-items: baseline;
+	z-index: 34456;
+}
+.top_slider figure figcaption .info .details img {
+	margin-right: 5px;
+}
+
+.top_slider figure figcaption .info .details a  {
+	color: #7F5568;
+	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+ font-weight: 500;
+ display: inline-block;
+	padding-top: 20px;
+}
+.top_slider figure figcaption .info .details a:hover   {
+	text-decoration: none;
+ 
+}
+ 
+ 
+/* Стилизация кнопок top-слайдера */
+.top_slider .slick-prev {
+	position: absolute;
+	left: 50px;
+	top: 40%;
+ 	width: 43px;
+	height: 43px;
+	z-index: 23;
+	background: rgba(0,0,0,0.1);  
+	color: #ffffff;
+ border-radius: 100%;
+	border-color: rgba(0,0,0,0.1);
+ transition: all 300ms ease-in-out;
+}  
+.top_slider .slick-prev:hover {
+	background: #fee489;
+	border-color: #fee489;
+	transition: all 300ms ease-in-out;
+	color: #7f5669;
+}
+.top_slider .slick-next {
+	position: absolute;
+	right: 50px;
+	top: 40%;
+ width: 43px;
+	height: 43px;
+	z-index: 23;
+	background: rgba(0,0,0,0.1); 
+	color: #ffffff;
+	border-radius: 100%;
+	border-color: rgba(0,0,0,0.1);
+	transition: all 300ms ease-in-out;
+}  
+.top_slider .slick-next:hover {
+	background: #fee489;
+	border-color: #fee489;
+	transition: all 300ms ease-in-out;
+	color: #7f5669;
+}
+ header.header nav {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 85px;
+	background: rgba(115, 72, 92, 0.9);
+	display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+header.header nav a.logo-nav{ /* ссылка OLINS слева */
+	text-decoration: none;
+	text-transform: lowercase;
+	font-size: 30px;
+	color: #ffffff;
+	font-family: 'Raleway', sans-serif;
+	font-style: italic;
+	font-weight: 900;
+	margin-left: 45px;
+}
+
+header.header nav .top-menu { /* Список UL менюшки */
+	font-family: 'Raleway', sans-serif;
+	font-size: 13px;
+	font-weight: 500;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+                     /* Стилизация элементов меню */
+header.header nav .top-menu li:first-child {
+	margin: 0 20px 0 0;
+}
+ 
+header.header nav .top-menu li:last-child {
+	margin: 0 0 0 20px;
+}
+ 
+header.header nav .top-menu li  {
+	margin: 0 20px 0 20px;
+}
+header.header nav .top-menu a { 
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-sizing: border-box;	
+	transition: all 300ms ease-in-out;
+}
+
+header.header nav .top-menu a.active {
+	color: #fee489;
+}
+
+header.header nav .top-menu a:hover {
+	color: #fee489;
+ transition: all 300ms ease-in-out;
+} /* Окончание стилизации элементов меню */
+
+										/* Стилизация иконки корзины (справа на полосе меню) */
+
+header.header nav .cart {
+	margin-right: 45px;
+	display: flex;
+	align-items: center;
+ justify-content: end;
+}
+
+header.header nav .cart a {
+	display: block;
+	width: 23px;
+	height: 23px;
+	border-radius: 100%;
+	background-color: #fee489;
+	font-family: Arial, Helvetica,  sans-serif;
+	color: #7f5669;
+	font-size: 10px;
+	text-decoration: none;
+	margin-left: 8px;
+	text-align: center;
+	line-height: 23px;
+}
+header.header nav .cart a:hover {
+	background-color: #ffffff;
+	color: #7f5669;
+	font-size: 15px;
+}
+     								/* Стилизация MAIN */
+   								/*  ====================== */
+ 
+   								/* Стилизация первой трети MAIN */
+section.info_box {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: auto;
+	/*	align-items: stretch;*/
+}
+section.info_box .Left_box {
+	background: url(../IMG/info.jpg) center center no-repeat;
+	background-size: cover;
+}
+
+section.info_box .Right_box {
+	padding: 125px 125px 125px 90px;
+	box-sizing: border-box;
+}
+section.info_box .Right_box .hello {
+	font-size: 25px;
+	font-family: 'Raleway', sans-serif;
+	color: #000000; 
+	font-style: italic;
+	line-height: 1;
+}
+section.info_box .Right_box h3 {
+	font-size: 37px;
+	font-family: 'Raleway', sans-serif;
+	color: #000000; 
+	font-weight: 500;
+	line-height: 1.4;
+	margin-bottom: 15px;
+}
+
+section.info_box .Right_box p {
+	font-family: 'Raleway', sans-serif;
+	line-height: 24px;
+	color: #898989;
+	font-size: 14px;
+}
+
+/* Стилизация второй section MAIN (.scills_and_team) */
+/* ================================================= */
+section.scills_and_team {
+	display: flex;
+	flex-direction: row;
+	height: auto;
+}
+section.scills_and_team .scills {
+	padding: 40px 70px 20px 70px;
+ box-sizing: border-box;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-template-rows: 1fr 1fr;
+ gap: 50px;
+ width: 50%;
+} 
+/* Стлизация 4-х span в div class="scills" */
+section.scills_and_team .scills h3 { 
+	font-family: 'Raleway', sans-serif;
+	line-height: 1;
+	color: #000000;
+	font-size: 16px;
+	font-weight: 900;
+	text-transform: uppercase;
+}
+
+section.scills_and_team .scills p { /* Стлизация текста 4-х параграфов в левой части второй section (.scills) */
+	font-family: 'Raleway', sans-serif;
+	line-height: 20px;
+	color: #898989;
+	font-size: 12px;
+	font-weight: 400;
+	margin:  20px 0 0 0;
+}
+section.scills_and_team .scills .our_adventages,
+section.scills_and_team .scills .our_scills,
+section.scills_and_team .scills .experience,
+section.scills_and_team .scills .proffesional_team {
+	position: relative; 
+}
+section.scills_and_team .scills .our_adventages::before,
+section.scills_and_team .scills .our_scills::before, 
+section.scills_and_team .scills .experience::before,
+section.scills_and_team .scills .proffesional_team::before {
+	content: url(../IMG/PointForDivScills.png); 
+	position: absolute;
+  left: -19px;
+  top: -2px;
+}
+ 
+     /* Стилизация правой части (слайдера) второй section MAIN */
+     /* ====================================================== */
+  
+section.scills_and_team .team { /* Фон и ширина самого div .team */
+	background: url(../IMG/SliderInto2Section/backgroundForThe-2ndSection.jpg) center center no-repeat;
+ background-size: cover;
+ position: relative;
+ /*padding: 100px 125px 60px 90px;*/
+ box-sizing: border-box;
+ width: 50%;
+ cursor: pointer;
+} 
+/* ЭКСПЕРЕМЕНТАЛЬНО!!! margin для слайдера вместо padding для team */
+section.scills_and_team .team .team_slider {
+	 margin: 100px 60px 60px 80px;
+	 
+}
+/* распредиление ширины окна отображения м/у отдельными слайдами */
+section.scills_and_team .team .team_slider .item {
+	width: 33.3%;
+	
+}
+/* "Резиновые" изображения в слайдере*/
+section.scills_and_team .team .team_slider .item figure img {
+	max-width: 100%;
+	height: auto; 
+}
+/* Готовим привязку для зеленой полосы с иконками соцсетей */
+section.scills_and_team .team .team_slider .item figure {
+	position: relative;
+	overflow: hidden;
+}
+/* стилизация и позиционирование зеленоватой полосы */
+section.scills_and_team .team .team_slider .item figure figcaption {
+	background: rgba(74, 99, 74, 0.7);
+	width: 100%;
+	height: 65px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: -65px;
+ transition: all 400ms ease-in-out;
+}
+/* плавное выезжание снизу зеленоватой полосы */
+section.scills_and_team .team .team_slider .item figure:hover figcaption {
+	margin-bottom: 0;
+	transition: all 400ms ease-in-out;
+}
+/* ширина, высота и отступ м/у иконки twitter в зеленоватой полосе */
+section.scills_and_team .team .team_slider .item figure figcaption a.twitter_team {
+	width: 22px;
+	height: 22px;
+	margin-right: 5px; 
+}
+/* ширина, высота и отступ м/у иконки facebook в зеленоватой полосе */
+section.scills_and_team .team .team_slider .item figure figcaption a.facebook_team {
+	width: 22px;
+	height: 22px;
+	margin-left: 5px; 
+}
+
+/* класс с данными на членов команды под их img-ами */
+section.scills_and_team .team .team_slider .item .data_of_member {
+		text-align: center;
+		margin-top: 27px;
+}
+/* стилизация н4 (имена участников команды) */
+section.scills_and_team .team .team_slider .item .data_of_member h4 {
+	font-family: 'Raleway', sans-serif;
+	line-height: 18px;
+	color: #000000;
+	font-size: 18px;
+	font-weight: 800;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	text-align: center;
+}
+/*  стилизация должностей учасников команды */
+section.scills_and_team .team .team_slider .item .data_of_member .position  {
+	font-family: 'Questrial', sans-serif;
+	line-height: 18px;
+	color: #557356;
+	font-size: 10px;
+	font-weight: 400;
+	text-transform: uppercase;
+	text-align: center;
+}
+/* стилизация и позиционироание стрелок навигации */
+section.scills_and_team .team .arrows {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	margin-top: -38px;
+	display: flex;
+ flex-direction: column;
+}
+/* стилизация стрелки "prev" */
+section.scills_and_team .team .arrows .slick-prev {
+	background: #ec9b9b url(../IMG/SliderInto2Section/ArrowLeft.png) center center no-repeat;
+	width: 38px;
+	height: 38px;
+	font-size: 0;
+	border: 0;
+}
+/* hover для стрелок */
+section.scills_and_team .team .arrows .slick-prev:hover {
+	background: #f7b79b url(../IMG/SliderInto2Section/ArrowLeft.png) center center no-repeat; 
+ transition: all 400 ease-in-out;
+}
+/* тилизация стрелки "next" */
+section.scills_and_team .team .arrows .slick-next {
+	background: #ec9b9b url(../IMG/SliderInto2Section/ArrowRight.png) center center no-repeat;;
+	width: 38px;
+	height: 38px;
+	font-size: 0;
+	border: 0;
+}
+
+section.scills_and_team .team .arrows .slick-next:hover {
+ background: #f7b79b url(../IMG/SliderInto2Section/ArrowRight.png) center center no-repeat; 
+ transition: all 400 ease-in-out;
+}
+/* СЛАЙДЕР ОКОНЧЕН, МАТЬ ЕГО!!!! */
+
+                  /* Стилизация третьей секции - магазин и контакты*/
+/* =============================================================================== */
+
+section.shop_and_form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: auto;
+}
+ /* Стилизация левой части третьей секции (.shop_box) */
+section.shop_and_form .shop_box {
+	background: url(../IMG/SectionThird/Layer-5061.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 130px 90px 130px 100px;
+ box-sizing: border-box;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+	}
+
+	section.shop_and_form .shop_box .shop_left_part h4 {
+		font-family: 'Raleway', sans-serif;
+		font-size: 47px;
+		line-height: 44px;
+		text-transform: uppercase;
+		font-weight: 800;
+		margin-bottom: 35px;
+		color: #000;
+	}
+
+	section.shop_and_form .shop_box .shop_left_part .button_details  {
+		font-family: 'Raleway', sans-serif;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 11px;
+		line-height: 11px;
+		border: 4px solid black;
+		letter-spacing: 5px;
+		color: #000000;
+		padding: 15px 20px 15px 23px;
+ 	 
+	}
+
+section.shop_and_form .shop_box	.shop_right_part {
+	margin-right: 90px;
+	display: flex;
+	align-items: center;
+}
+
+section.shop_and_form .shop_box	.shop_right_part .title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	font-weight: 500;
+	color: #000000;
+	line-height: 12px;
+	text-align: right;
+	margin-right: 10px;
+}
+  /* Стилизация правой части третьей секции (.form_box) */
+ section.shop_and_form .form_box {
+	background: url(../IMG/SectionThird/BigTwitter.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 16.4% 10.4% 13.8% 9.4%;
+ box-sizing: border-box;
+ display: grid;
+ grid-template-columns: 1.57fr 1fr;
+ gap: 10%;
+ 
+}
+section.shop_and_form .form_box .box_left_part h4 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 37px;
+	font-weight: 500;
+	color: #000000;
+ margin-bottom: 30px;
+}
+
+section.shop_and_form .form_box .box_left_part form {
+	display: flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+section.shop_and_form .form_box .box_left_part form input[type="text"] {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	height: 55px;
+	border-top: 1px solid #eaedee;
+	color: #898989;
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	background: url(../IMG/SectionThird/LayerForInput.jpg) center center no-repeat;
+ background-size: cover;
+ padding-left: 20px;
+ width: calc(50% - 7px);
+ box-sizing: border-box;
+ margin: 0 5px 0 0;
+	 
+}
+section.shop_and_form .form_box .box_left_part form input[type="email"] {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	height: 55px;
+	border-top: 1px solid #eaedee;
+	color: #898989;
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	background: url(../IMG/SectionThird/LayerForInput.jpg) center center no-repeat;
+ background-size: cover;
+ padding-left: 20px;
+ width: calc(50% - 7px); 
+ box-sizing: border-box;
+ margin-left: 5px;
+ margin: 0 0 0 5px;
+}
+
+section.shop_and_form .form_box .box_left_part form .text   {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	margin: 12px 0 15px 0;
+	height: 100px;
+	border-top: 1px solid #eaedee;
+	color: #898989;
+	font-family: 'Raleway', sans-serif;
+	font-size: 12px;
+	font-weight: 500;
+	background: url(../IMG/SectionThird/LayerForInput.jpg) center center no-repeat;
+ background-size: cover;
+ padding: 20px 0 0 20px;
+ width: 100%; 
+ box-sizing: border-box;
+}
+
+section.shop_and_form .form_box .box_left_part form input[type="submit"] {
+border: 0;
+padding: 0;
+margin: 0;
+padding: 18px 35px 18px 35px; 
+background:	#fee489;
+color: #000;
+font-family: 'Raleway', sans-serif;
+font-size: 16px;
+font-weight: 900;
+text-transform: uppercase;
+}
+
+section.shop_and_form .form_box .box_right_part {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 10.0%;
+}
+
+section.shop_and_form .form_box .box_right_part .login {
+	margin: 18px 0 25px 0;
+	font-family: 'Raleway', sans-serif;
+	color: #A2A2A2;
+	font-size: 17px;
+	line-height: 24px;
+	font-style: italic;
+	font-weight: 500;
+}
+
+section.shop_and_form .form_box .box_right_part p {
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color: #000;
+	font-size: 19px;
+	line-height: 19px;
+	font-weight: 500;
+}
+
+section.shop_and_form .form_box .box_right_part .date {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	color:  #A2A2A2;
+	font-size: 10px;
+	line-height: 18px;
+	font-weight: 500;
+	margin-top: 14px;
+}
+
+/* СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА */
+/* ========================================================================================= */
+footer.footer {
+	background: url(../IMG/Footer/LayerForFooter.jpg) center center no-repeat;
+	background-size: cover;
+	padding: 2.7% 4.7% 2.7% 4.7%;
+	display: grid;
+	grid-template-columns: 2.5fr 1.7fr 1fr;
+	grid-template-rows: auto;
+}
+
+footer.footer .left_data {
+	display: grid;
+	grid-template-columns: 4.52fr 4.52fr 2.3fr 1.98fr;
+	grid-template-rows: auto;
+	gap: 6.2%;
+}
+
+footer.footer .left_data .footer_info {
+	font-size: 11px;
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	color:  #9c7588;
+	line-height: 11px;
+	font-weight: 500;
+}
+footer.footer .left_data .contacts .tel {
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+	font-size: 18px;
+	line-height: 20px;
+	font-weight: 600;
+}
+
+footer.footer .left_data .contacts .address {
+	font-family: 'Raleway', sans-serif;
+	color: #ffffff;
+	font-size: 14px;
+	line-height: 24px;
+	font-weight: 500;
+}
+
+footer.footer .left_data .contacts .copyright {
+	font-family: 'Arial', 'Helvetica', sans-serif;
+	color:#9c7588;
+	font-size: 11px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+footer.footer .left_data nav.footer_nav1 ul a {
+ color: #fee489;
+ font-family: 'Raleway', sans-serif;
+	font-size: 10px;
+	line-height: 26px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 300ms ease-in-out;
+}
+footer.footer .left_data nav.footer_nav1 ul a:hover {
+	text-decoration: underline;
+	transition: all 300ms ease-in-out;
+}
+
+footer.footer .left_data nav.footer_nav2 ul a {
+	color: #fee489;
+ font-family: 'Raleway', sans-serif;
+	font-size: 10px;
+	line-height: 26px;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all 300ms ease-in-out;
+}
+
+footer.footer .left_data nav.footer_nav2 ul a:hover {
+	text-decoration: underline;
+	transition: all 300ms ease-in-out;
+}
+
+footer.footer .right_data {
+	position: relative;
+}
+
+footer.footer .right_data .social {
+position: absolute;
+top: 50%;
+right: 0px;
+width: 100%;
+margin-top: -10px;
+text-align: end;
+}
+
+footer.footer .right_data .social a {
+	margin-left: 13%;
+}
+footer.footer .right_data .social a:first-child {
+	margin-left: 0;
+}
+
+
+
