@@ -1,6 +1,8 @@
 $(document).ready(function(){
       $('.top_slider').slick({
       	 mobileFirst: true,
+      	 prevArrow: '<img class="slick-prev" src="Assets/IMG/arrowForSliderNext.png">',
+								nextArrow: '<img class="slick-next" src="Assets/IMG/arrowForSliderPrev.png">'
       });
 
       $('.team_slider').slick({
@@ -30,7 +32,14 @@ $(document).ready(function(){
       });
 
     }); 
-$(".slick-next").text(">");
-$(".slick-prev").text("<");
 
+
+menu.onclick = function myFunction() {
+	var x = document.getElementById("myTopnav");
+
+	if (x.className === "top-menu") {
+		x.className += " responsive";
+	}	else {x.className === "top-menu";
+	}
+};
 

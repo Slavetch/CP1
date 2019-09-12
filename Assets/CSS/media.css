@@ -1,0 +1,508 @@
+@media screen and (max-width: 768px) {
+
+}
+
+
+
+@media screen and (max-width: 420px) {
+	/* ========================= Стилизация HEADER ========================== */
+body a {
+	cursor: pointer;
+}
+header.header {
+	position: relative;
+}
+header.header .top_slider figure {
+	position: relative;
+}
+
+header.header .top_slider figure img {
+	max-width: 140%;
+	height: auto;
+}
+
+header.header .top_slider figure figcaption {
+	position: absolute; 
+	top: 29px;
+ left: 28px;
+ width: 100%;
+}
+header.header .top_slider figure figcaption .info {
+	margin-left: 0;
+	position: relative;
+	 
+}
+header.header .top_slider figure::after {
+	visibility: hidden;
+}
+
+header.header .top_slider figure figcaption .info span.category {
+ 	margin: 20px 0 13px 0;
+ }
+
+header.header .top_slider figure figcaption .info h2 {
+	font-size: 20px;
+}
+
+header.header .top_slider figure figcaption .info .details {
+	display: none;
+}
+  
+/* ============ Стилизация кнопок top-слайдера ============*/
+header.header .top_slider .slick-prev,
+header.header .top_slider .slick-next {
+	 display: none !important;
+}  
+  
+/* ==================== Cтилизация полосы MENU ==================== */
+ 
+ /* Расположение и background для menu */
+ header.header nav {
+	bottom: -85px;
+ }
+
+/* ссылка OLINS слева */
+header.header nav a.logo-nav {
+	margin-left: 0;
+ position: absolute;
+ top: -196px;
+ left: 28px;
+}
+
+header.header nav a.logo-nav h1{ 
+	font-size: 70px;
+	color: rgba(115, 72, 92, 1);;
+}
+/* Стилизация расположения элементов меню на полосе менюшки */
+header.header nav .top-menu.responsive { 
+	display: flex;
+ flex-direction: column;
+ align-items: start;
+ position: absolute;
+ top: 19px;
+ left: 34px;
+}
+/* ================== Стилизация самих элементов меню ================== */
+
+
+header.header nav .top-menu {
+	font-size: 16px;
+}
+/* Прячу все элементы меню кроме первого */
+header.header nav .top-menu li:not(:first-child) {
+	display: none;
+}
+ /* Стилизация первого и последнего элементов */
+header.header nav .top-menu li:last-child {
+	margin: 0 20px 0 0;
+	display: block;
+	position: absolute;
+	right: 32%;
+	top: 50%;
+	margin-top: -8px;
+} 
+header.header nav .top-menu li:first-child {
+	margin: 0 0 0 40px;
+}
+
+header.header nav .top-menu.responsive li {
+display: block;
+text-align: left;
+margin: 0;
+font-size: 17px;
+line-height: 50px;
+font-family: 'Raleway', sans-serif;
+font-weight: 700;
+}
+
+header.header nav .top-menu.responsive li a:hover {
+	text-transform: uppercase;
+}
+/* Исчезновение "бургера" при нажатии на него */
+header.header nav .top-menu.responsive li.icon {
+	display: none;
+}
+
+ 
+
+/* ================= Общая стилизация ссылок в меню ================= */
+header.header nav .top-menu a { 
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-sizing: border-box;	
+	transition: all 300ms ease-in-out;
+}
+/* Чтобы не исчезало DROPMENU при убирании курсора с ссылки Works */
+header.header nav .top-menu .works {
+	padding-bottom: 90%;
+}
+/* Активная ссылка имеет отдельную стилизацию */
+header.header nav .top-menu a.active {
+	color: #fee489;
+}
+/* Стилизация ссылок при hover */
+header.header nav .top-menu a:active {
+	color: #fee489;
+ transition: all 300ms ease-in-out;
+} 
+/* Убираем dropmenu до наведения курсора */
+header.header nav .top-menu .drop_menu {
+	display: none;
+}
+/* Позиционирование dropmenu при наведении курсора */
+header.header nav #myTopnav .works_dropmenu:hover ul.drop_menu {
+	display: flex;
+ flex-direction: column;
+	position: absolute;
+ top: 95px;
+	left: 120px;
+	background: none;
+	width: 200px;
+} 
+/* Растояние между li по вертикали */
+header.header nav ul#myTopnav li.works_dropmenu ul.drop_menu li {
+	line-height: 65px;
+}
+/* Сбрасывание отдельно заданных свойств элемента last-child */
+header.header nav ul#myTopnav li.works_dropmenu ul.drop_menu li:last-child  {
+ position: relative;
+ right: 0;
+ top: 0;
+ }
+
+/* Стилизация ссылок в dropmenu */
+header.header nav ul li.works_dropmenu ul li a {
+ color: #000000; 
+	font-size: 17px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	border: 2px solid black; 
+	text-transform: capitalize;
+	padding: 10px 20px;
+	background: rgb(250, 235, 215);
+}
+
+/* Стилизация ссылок dropmenu при наведении курсора */
+header.header nav ul li.works_dropmenu ul li a:hover {
+	text-decoration: underline;
+}
+
+/* Окончание стилизации элементов меню */
+
+/* Стилизация иконки корзины (справа на полосе меню) */
+
+header.header nav .cart {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	margin: -11px 40px 0 0;
+}
+
+header.header nav .cart a {
+	display: block;
+	width: 23px;
+	height: 23px;
+	border-radius: 100%;
+	background-color: #fee489;
+	font-family: Arial, Helvetica,  sans-serif;
+	color: #7f5669;
+	font-size: 10px;
+	text-decoration: none;
+	margin-left: 8px;
+	text-align: center;
+	line-height: 23px;
+}
+header.header nav .cart a:hover {
+	background-color: #ffffff;
+	color: #7f5669;
+	font-size: 15px;
+}
+
+/* ======================== Стилизация MAIN ======================== */
+	/* ============ Стилизация первой трети MAIN ============== */
+	main section.info_box {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
+	}
+	main section.info_box .Left_box {
+		background: url(../IMG/info.jpg) center center no-repeat;
+		background-size: cover;
+		height: auto;
+	}
+
+	main section.info_box .Right_box {
+		box-sizing: border-box;
+		padding: 5% 6% 15px 6%;
+	}
+
+	main section .info_box .Right_box .hello {
+		font-size: 25px;
+		font-family: 'Raleway', sans-serif;
+		color: #000000; 
+		font-style: italic;
+		line-height: 1;
+	}
+
+	main section .info_box .Right_box h3 {
+		font-size: 37px;
+		font-family: 'Raleway', sans-serif;
+		color: #000000; 
+		font-weight: 500;
+		line-height: 1.4;
+		margin-bottom: 15px;
+	}
+
+	main section .info_box .Right_box .font_for_info {
+		font-family: 'Raleway', sans-serif;
+		line-height: 24px;
+		color: #898989;
+		font-size: 14px;
+	}
+
+	/* Стилизация второй section MAIN (.scills_and_team) */
+	main section.scills_and_team {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+
+	main section.scills_and_team .scills {
+		padding: 40px 15px 20px 40px;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto;
+		gap: 25px;
+		width: 100%;
+	}
+	/* Стлизация 4-х span в div class="scills" */
+	main section.scills_and_team .scills h3 { 
+		font-size: 27px;
+	}
+
+	/* Стлизация текста 4-х параграфов в левой части второй section (.scills) */
+	main section.scills_and_team .scills p { 
+		font-size: 16px;
+		margin:  5px 0 0 0;
+	}
+
+	main section.scills_and_team .scills .our_adventages::before,
+	main section.scills_and_team .scills .our_scills::before, 
+	main section.scills_and_team .scills .experience::before,
+	main section.scills_and_team .scills .proffesional_team::before {
+		content: url(../IMG/PointForDivScills.png); 
+		position: absolute;
+		left: -19px;
+		top: 3px;
+	}
+	/* =======================Стилизация СЛАЙДЕРА==================== */
+	/* Фон и ширина самого div .team */
+	main section.scills_and_team .team { 
+		/*padding: 100px 125px 60px 90px;*/
+		box-sizing: border-box;
+		width: 100%;
+	} 
+
+	main section.scills_and_team .team .arrows {
+		top: 100%;
+		left: 50%;
+		margin-left: -38px;
+		flex-direction: row;
+	}
+
+	main section.scills_and_team .team .team_slider .item figure:hover figcaption {
+		margin-bottom: 0;
+		transition: all 400ms ease-in-out;
+	}
+
+	main section.scills_and_team .team .team_slider .item figure img {
+		min-width: 100%;
+		height: auto;
+	}
+
+	main section.scills_and_team .team .team_slider {
+		margin: 40px 40px 40px 40px;
+	}
+
+	/* ======== Стилизация секции NEW OLINS SHOP и CONTACTS ====== */
+
+	main section.shop_and_form {
+		display: grid;
+		grid-template-columns: 1fr;
+		height: auto;
+	}
+
+	main section.shop_and_form .shop_box {
+		background: url(../IMG/SectionThird/Layer-5061.jpg) center center
+		no-repeat;
+		background-size: cover;
+		padding: 30px 9px 81px 18px;
+		box-sizing: border-box;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: relative;
+	}
+
+	main section.shop_and_form .shop_box .shop_left_part h4 {
+		font-size: 29px;
+		line-height: 37px;
+		margin-bottom: 46px;
+	}
+
+	main section.shop_and_form .shop_box .shop_right_part {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: 5%;
+		bottom: 12%;
+	}
+
+	main section.shop_and_form .shop_box .shop_right_part .title {
+		margin-right: 3px;
+		font-size: 13px;
+	}
+
+	/* Стилизация правой части третьей секции (.form_box) */
+	main section.shop_and_form .form_box {
+		background: url(../IMG/SectionThird/BigTwitter.jpg) top right no-repeat;
+		background-size: cover;
+		padding: 16.4% 3.4% 13.8% 3.4%;
+		box-sizing: border-box;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 4%;
+	}
+
+	main section.shop_and_form .form_box .box_left_part {
+		grid-area: 2/1/3/2;
+		margin-bottom: -35px;
+	}
+
+	main section.shop_and_form .form_box .box_right_part {
+		grid-area: 1/1/2/2;
+		margin: 0;
+	}
+
+	main section.shop_and_form .form_box .box_left_part h4 {
+		text-align: center;
+	}
+
+	main section.shop_and_form .form_box .box_left_part form {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-items: start;
+	}
+
+	main section.shop_and_form .form_box .box_left_part form input[type="text"],
+	main section.shop_and_form .form_box .box_left_part form input[type="email"],
+	main section.shop_and_form .form_box .box_left_part form .text {
+		width: calc(100% - 7px);
+		background: #FFF;
+		font-size: 15px;
+		margin: 3px 0 3px 0;
+		box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	}
+
+	main section.shop_and_form .form_box .box_left_part form input[type="submit"] {
+		border-radius: 17px;
+		margin: 55px 0;
+		box-shadow: 0px 0px 22px #2196F3;
+		margin-left: 16%;
+	}
+
+	/* ============== Стилизация ФУТЕРА =============== */
+	footer.footer {
+		background: url(../IMG/Footer/LayerForFooter.jpg) center center no-repeat;
+		background-size: cover;
+		padding: 2.7% 4.7% 2.7% 4.7%;
+		display: flex;
+		flex-direction: column; 
+	}
+
+	footer.footer .footer_info {
+		font-size: 15px;
+		line-height: 20px;
+		margin-bottom: 30px;
+	}
+
+	footer.footer .contacts .tel {
+		font-size: 35px;
+	}
+
+	footer.footer .contacts .address {
+		font-size: 22px;
+		line-height: 3.5;
+	}
+
+	footer.footer .contacts .copyright {
+		font-size: 16px;
+		margin-top: 17px;
+		position: absolute;
+		bottom: 0;
+	}
+
+	footer.footer nav.footer_nav1 ul a {
+		color: #fee489;
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+  line-height: 60px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+/*		transition: all 300ms ease-in-out;
+*/	}
+	footer.footer nav.footer_nav1 ul a:hover {
+		text-decoration: underline;
+/*		transition: all 300ms ease-in-out;
+*/	}
+
+	footer.footer nav.footer_nav2 ul a {
+		color: #fee489;
+		font-family: 'Raleway', sans-serif;
+		font-size: 16px;
+  line-height: 60px;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+/*		transition: all 300ms ease-in-out;
+*/	}
+
+	footer.footer nav.footer_nav2 ul a:hover {
+		text-decoration: underline;
+/*		transition: all 300ms ease-in-out;
+*/	}
+
+	footer.footer .social {
+		position: initial;
+		margin-top: 19px;
+		text-align: center;
+		margin-bottom: 55px;
+	}
+
+	footer.footer .social a {
+		margin-left: 15%;
+	}
+
+	footer.footer .social a:first-child {
+		margin-left: 0;
+	}
+	footer.footer .social a img {
+		width: 30px;
+		height: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

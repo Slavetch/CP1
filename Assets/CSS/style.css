@@ -2,9 +2,7 @@
 	font-family: 'Raleway', sans-serif;
 font-family: 'Questrial', sans-serif;*/
  
-
-
-
+@import url(../CSS/media.css);
 
 header.header {
 	position: relative;
@@ -33,7 +31,7 @@ header.header {
 	width: 100%;
 	margin-left: 150px;
 	position: relative;
-	
+	z-index: 99;
 }
 .top_slider figure::after {
  content: "olins";
@@ -62,7 +60,6 @@ header.header {
 	line-height: 1;
 	margin: 0px 0 13px 0;
  display: block;
-  
 }
 
 .top_slider figure figcaption .info h2 {
@@ -83,7 +80,7 @@ header.header {
 	margin-right: 5px;
 }
 
-.top_slider figure figcaption .info .details a  {
+.top_slider figure figcaption .info .details .readMore {
 	color: #7F5568;
 	font-size: 16px;
 	font-family: 'Raleway', sans-serif;
@@ -91,52 +88,47 @@ header.header {
  display: inline-block;
 	padding-top: 20px;
 }
-.top_slider figure figcaption .info .details a:hover   {
+.top_slider figure figcaption .info .details .readMore:hover  {
 	text-decoration: none;
- 
 }
  
- 
-/* Стилизация кнопок top-слайдера */
-.top_slider .slick-prev {
+/* ============ Стилизация кнопок top-слайдера ============*/
+.top_slider .slick-next {
+	background:url(../IMG/arrowForSliderNext.png) ;
 	position: absolute;
 	left: 50px;
 	top: 40%;
- 	width: 43px;
-	height: 43px;
-	z-index: 23;
-	background: rgba(0,0,0,0.1);  
-	color: #ffffff;
- border-radius: 100%;
-	border-color: rgba(0,0,0,0.1);
- transition: all 300ms ease-in-out;
-}  
-.top_slider .slick-prev:hover {
-	background: #fee489;
-	border-color: #fee489;
 	transition: all 300ms ease-in-out;
-	color: #7f5669;
-}
-.top_slider .slick-next {
+}  
+.header .top_slider .slick-next:hover {
+	background:url(../IMG/arrowForSliderNext.png) center center;
+	background-size: cover;
+	transition: all 300ms ease-in-out;
+	cursor: pointer;
+	position: absolute;
+	z-index: 34;
+ }
+
+.top_slider .slick-prev {
 	position: absolute;
 	right: 50px;
 	top: 40%;
- width: 43px;
-	height: 43px;
-	z-index: 23;
-	background: rgba(0,0,0,0.1); 
-	color: #ffffff;
-	border-radius: 100%;
-	border-color: rgba(0,0,0,0.1);
+	z-index: 1;
 	transition: all 300ms ease-in-out;
 }  
-.top_slider .slick-next:hover {
-	background: #fee489;
-	border-color: #fee489;
+
+.top_slider .slick-prev:hover {
+	 background:url(../IMG/arrowForSliderNextHover.png) center center no-repeat;
+	background-size: cover;
+	z-index: 9999;
 	transition: all 300ms ease-in-out;
-	color: #7f5669;
+	cursor: pointer;
 }
- header.header nav {
+/* ==================== Cтилизация полосы MENU ==================== */
+ 
+
+ /* Расположение и background для menu */
+ header nav {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -148,7 +140,8 @@ header.header {
  align-items: center;
  }
 
-header.header nav a.logo-nav{ /* ссылка OLINS слева */
+/* ссылка OLINS слева */
+header nav a.logo-nav{ 
 	text-decoration: none;
 	text-transform: lowercase;
 	font-size: 30px;
@@ -158,8 +151,8 @@ header.header nav a.logo-nav{ /* ссылка OLINS слева */
 	font-weight: 900;
 	margin-left: 45px;
 }
-
-header.header nav .top-menu { /* Список UL менюшки */
+/* Стилизация расположения элементов меню на полосе менюшки */
+header nav .top-menu { 
 	font-family: 'Raleway', sans-serif;
 	font-size: 13px;
 	font-weight: 500;
@@ -167,45 +160,88 @@ header.header nav .top-menu { /* Список UL менюшки */
 	flex-direction: row;
 	justify-content: space-between;
 }
-                     /* Стилизация элементов меню */
-header.header nav .top-menu li:first-child {
+/* ================== Стилизация самих элементов меню ================== */
+header nav .top-menu li:first-child {
 	margin: 0 20px 0 0;
 }
  
-header.header nav .top-menu li:last-child {
+header nav .top-menu li:last-child {
 	margin: 0 0 0 20px;
 }
  
-header.header nav .top-menu li  {
+header nav .top-menu li  {
 	margin: 0 20px 0 20px;
 }
-header.header nav .top-menu a { 
+/* ================= Общая стилизация ссылок в меню ================= */
+header nav .top-menu a { 
 	color: #ffffff;
 	text-decoration: none;
 	text-transform: uppercase;
 	box-sizing: border-box;	
 	transition: all 300ms ease-in-out;
 }
-
-header.header nav .top-menu a.active {
+/* Чтобы не исчезало DROPMENU при убирании курсора с ссылки Works */
+header nav .top-menu .works {
+	padding-bottom: 90%;
+}
+/* Активная ссылка имеет отдельную стилизацию */
+header nav .top-menu a:active {
 	color: #fee489;
 }
 
-header.header nav .top-menu a:hover {
+header nav .top-menu .icon {
+	display: none;
+}
+
+
+/* Стилизация ссылок при hover */
+header nav .top-menu a:hover {
 	color: #fee489;
  transition: all 300ms ease-in-out;
-} /* Окончание стилизации элементов меню */
+} 
+/* Убираем dropmenu до наведения курсора */
+header nav .top-menu .drop_menu {
+	display: none;
+}
 
-										/* Стилизация иконки корзины (справа на полосе меню) */
+/* Стилизация dropmenu при наведении курсора */
+header nav .top-menu .works_dropmenu:hover ul {
+	background:url(../IMG/Drop_menu/Layer.jpg) center center no-repeat;
+	display: flex;
+ justify-content: center;
+	position: absolute;
+	bottom: -30px;
+	width: 100%;
+	left: 0;
+} 
+/* Стилизация ссылок в dropmenu */
+header nav ul li.works_dropmenu ul li a {
+	color: #000000; 
+	font-size: 12px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	line-height: 30px;
+	text-transform: capitalize;
+}
+/* Стилизация ссылок dropmenu при наведении курсора */
+header nav ul li.works_dropmenu ul li a:hover {
+	text-decoration: underline;
+	color: black;
+}
 
-header.header nav .cart {
+
+/* Окончание стилизации элементов меню */
+
+/* Стилизация иконки корзины (справа на полосе меню) */
+
+header nav .cart {
 	margin-right: 45px;
 	display: flex;
 	align-items: center;
  justify-content: end;
 }
 
-header.header nav .cart a {
+header nav .cart a {
 	display: block;
 	width: 23px;
 	height: 23px;
@@ -219,7 +255,7 @@ header.header nav .cart a {
 	text-align: center;
 	line-height: 23px;
 }
-header.header nav .cart a:hover {
+header nav .cart a:hover {
 	background-color: #ffffff;
 	color: #7f5669;
 	font-size: 15px;
@@ -232,7 +268,7 @@ section.info_box {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	height: auto;
-	/*	align-items: stretch;*/
+	 
 }
 section.info_box .Left_box {
 	background: url(../IMG/info.jpg) center center no-repeat;
@@ -305,6 +341,7 @@ section.scills_and_team .scills .our_scills,
 section.scills_and_team .scills .experience,
 section.scills_and_team .scills .proffesional_team {
 	position: relative; 
+	background-color: aliceblue;
 }
 section.scills_and_team .scills .our_adventages::before,
 section.scills_and_team .scills .our_scills::before, 
@@ -316,7 +353,7 @@ section.scills_and_team .scills .proffesional_team::before {
   top: -2px;
 }
  
-     /* Стилизация правой части (слайдера) второй section MAIN */
+     /* Стилизация  СЛАЙДЕРА во второй section MAIN */
      /* ====================================================== */
   
 section.scills_and_team .team { /* Фон и ширина самого div .team */
@@ -453,9 +490,9 @@ section.shop_and_form {
 }
  /* Стилизация левой части третьей секции (.shop_box) */
 section.shop_and_form .shop_box {
-	background: url(../IMG/SectionThird/Layer-5061.jpg) center center no-repeat;
+	background: url(../IMG/SectionThird/Layer-5061.jpg) center right no-repeat;
 	background-size: cover;
-	padding: 130px 90px 130px 100px;
+ padding: 130px 12% 130px 12%;
  box-sizing: border-box;
  display: flex;
  justify-content: space-between;
@@ -487,7 +524,7 @@ section.shop_and_form .shop_box {
 	}
 
 section.shop_and_form .shop_box	.shop_right_part {
-	margin-right: 90px;
+	margin-right: 12%;
 	display: flex;
 	align-items: center;
 }
@@ -511,8 +548,8 @@ section.shop_and_form .shop_box	.shop_right_part .title {
  display: grid;
  grid-template-columns: 1.57fr 1fr;
  gap: 10%;
- 
 }
+
 section.shop_and_form .form_box .box_left_part h4 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 37px;
@@ -632,30 +669,25 @@ section.shop_and_form .form_box .box_right_part .date {
 
 /* СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА СТИЛИЗАЦИЯ ФУТЕРА */
 /* ========================================================================================= */
-footer.footer {
+.footer {
 	background: url(../IMG/Footer/LayerForFooter.jpg) center center no-repeat;
 	background-size: cover;
 	padding: 2.7% 4.7% 2.7% 4.7%;
 	display: grid;
-	grid-template-columns: 2.5fr 1.7fr 1fr;
+	grid-template-columns: 1.56fr 1.8fr 1.3fr 1fr 4.1fr 1.3fr;
 	grid-template-rows: auto;
+	gap: 1.2%;
+	position: relative;
 }
-
-footer.footer .left_data {
-	display: grid;
-	grid-template-columns: 4.52fr 4.52fr 2.3fr 1.98fr;
-	grid-template-rows: auto;
-	gap: 6.2%;
-}
-
-footer.footer .left_data .footer_info {
+ 
+.footer .footer_info {
 	font-size: 11px;
 	font-family: 'Arial', 'Helvetica', sans-serif;
 	color:  #9c7588;
 	line-height: 11px;
 	font-weight: 500;
 }
-footer.footer .left_data .contacts .tel {
+.footer .contacts .tel {
 	font-family: 'Raleway', sans-serif;
 	color: #ffffff;
 	font-size: 18px;
@@ -663,7 +695,7 @@ footer.footer .left_data .contacts .tel {
 	font-weight: 600;
 }
 
-footer.footer .left_data .contacts .address {
+.footer .contacts .address {
 	font-family: 'Raleway', sans-serif;
 	color: #ffffff;
 	font-size: 14px;
@@ -671,7 +703,7 @@ footer.footer .left_data .contacts .address {
 	font-weight: 500;
 }
 
-footer.footer .left_data .contacts .copyright {
+.footer .contacts .copyright {
 	font-family: 'Arial', 'Helvetica', sans-serif;
 	color:#9c7588;
 	font-size: 11px;
@@ -679,7 +711,7 @@ footer.footer .left_data .contacts .copyright {
 	font-weight: 400;
 }
 
-footer.footer .left_data nav.footer_nav1 ul a {
+.footer nav.footer_nav1 ul a {
  color: #fee489;
  font-family: 'Raleway', sans-serif;
 	font-size: 10px;
@@ -689,12 +721,12 @@ footer.footer .left_data nav.footer_nav1 ul a {
 	text-decoration: none;
 	transition: all 300ms ease-in-out;
 }
-footer.footer .left_data nav.footer_nav1 ul a:hover {
+.footer nav.footer_nav1 ul a:hover {
 	text-decoration: underline;
 	transition: all 300ms ease-in-out;
 }
 
-footer.footer .left_data nav.footer_nav2 ul a {
+.footer nav.footer_nav2 ul a {
 	color: #fee489;
  font-family: 'Raleway', sans-serif;
 	font-size: 10px;
@@ -705,28 +737,25 @@ footer.footer .left_data nav.footer_nav2 ul a {
 	transition: all 300ms ease-in-out;
 }
 
-footer.footer .left_data nav.footer_nav2 ul a:hover {
+.footer nav.footer_nav2 ul a:hover {
 	text-decoration: underline;
 	transition: all 300ms ease-in-out;
 }
 
-footer.footer .right_data {
-	position: relative;
-}
-
-footer.footer .right_data .social {
+.footer .social {
 position: absolute;
 top: 50%;
-right: 0px;
+right: 4.7%;
 width: 100%;
 margin-top: -10px;
 text-align: end;
 }
 
-footer.footer .right_data .social a {
-	margin-left: 13%;
+.footer .social a {
+	margin-left: 3%;
 }
-footer.footer .right_data .social a:first-child {
+
+.footer .social a:first-child {
 	margin-left: 0;
 }
 
